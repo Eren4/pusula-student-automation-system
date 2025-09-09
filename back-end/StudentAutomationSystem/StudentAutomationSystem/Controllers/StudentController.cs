@@ -20,29 +20,13 @@ public class StudentController : ControllerBase
     public async Task<ActionResult<IEnumerable<StudentDTO>>> GetStudents()
     {
         var students = await _context.Students
-            .Include(student => student.Grades)
-            .ThenInclude(grade => grade.Course)
-            .Select(student => new StudentDTO
+            .Select(s => new StudentDTO
             {
-                StudentId = student.StudentId,
-                StudentName = student.StudentName,
-                StudentSurname = student.StudentSurname,
-                StudentEmail = student.StudentEmail,
-                Grades = student.Grades.Select(grade => new GradeDTO
-                {
-                    CourseId = grade.CourseId,
-                    CourseName = grade.Course.CourseName,
-
-                    StudentId = student.StudentId,
-                    StudentName = student.StudentName,
-                    StudentSurname = student.StudentSurname,
-
-                    StudentGrade = grade.StudentGrade,
-                    StudentAbsence = grade.StudentAbsence,
-                    StudentComment = grade.StudentComment
-                }).ToList()
-            })
-            .ToListAsync();
+                StudentId = s.StudentId,
+                StudentName = s.StudentName,
+                StudentSurname = s.StudentSurname,
+                StudentEmail = s.StudentEmail
+            }).ToListAsync();
 
         return students;
     }
@@ -51,41 +35,55 @@ public class StudentController : ControllerBase
     public async Task<ActionResult<StudentDTO>> GetStudent(int id)
     {
         var student = await _context.Students
-            .Include(student => student.Grades)
-            .ThenInclude(grade => grade.Course)
-            .Where(student => student.StudentId == id)
-            .Select(student => new StudentDTO
+            .Where(s => s.StudentId == id)
+            .Select(s => new StudentDTO
             {
-                StudentId = student.StudentId,
-                StudentName = student.StudentName,
-                StudentSurname = student.StudentSurname,
-                StudentEmail = student.StudentEmail,
-                Grades = student.Grades.Select(grade => new GradeDTO
-                {
-                    CourseId = grade.CourseId,
-                    CourseName = grade.Course.CourseName,
-
-                    StudentId = student.StudentId,
-                    StudentName = student.StudentName,
-                    StudentSurname = student.StudentSurname,
-
-                    StudentGrade = grade.StudentGrade,
-                    StudentAbsence = grade.StudentAbsence,
-                    StudentComment = grade.StudentComment
-                }).ToList()
-            })
-            .FirstOrDefaultAsync();
+                StudentId = s.StudentId,
+                StudentName = s.StudentName,
+                StudentSurname = s.StudentSurname,
+                StudentEmail = s.StudentEmail
+            }).FirstOrDefaultAsync();
 
         if (student == null)
         {
-            return NotFound("Student not found");
+            return NotFound("Student with id " + id + " not found");
         }
 
         return student;
     }
 
+    // Get grades for a specific student
+    [HttpGet("{id}/grades")]
+    public async Task<ActionResult<IEnumerable<GradeDTO>>> GetStudentGrades(int id)
+    {
+        var student = await _context.Students.FindAsync(id);
+
+        if (student == null)
+        {
+            return NotFound("Student with id " + id + " not found");
+        }
+
+        var grades = await _context.Grades
+            .Where(g => g.StudentId == id)
+            .Select(g => new GradeDTO
+            {
+                CourseId = g.CourseId,
+                CourseName = g.Course.CourseName,
+                
+                StudentId = g.StudentId,
+                StudentName = g.Student.StudentName,
+                StudentSurname = g.Student.StudentSurname,
+
+                StudentGrade = g.StudentGrade,
+                StudentAbsence = g.StudentAbsence,
+                StudentComment = g.StudentComment
+            }).ToListAsync();
+
+        return grades;
+    }
+
     [HttpPost]
-    public async Task<ActionResult<Student>> CreateStudent(Student student)
+    public async Task<ActionResult<StudentDTO>> CreateStudent(Student student)
     {
         _context.Students.Add(student);
         await _context.SaveChangesAsync();
