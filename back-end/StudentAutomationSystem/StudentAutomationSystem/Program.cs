@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using StudentAutomationSystem.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
