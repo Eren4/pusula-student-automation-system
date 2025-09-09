@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using YourNamespace.Models;
+using StudentAutomationSystem.Models;
 
 public class AppDbContext : DbContext
 {
