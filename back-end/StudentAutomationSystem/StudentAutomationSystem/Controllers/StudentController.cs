@@ -31,6 +31,20 @@ public class StudentController : ControllerBase
         return students;
     }
 
+    [HttpGet("login")]
+    public async Task<ActionResult> Login([FromBody] LoginDTO loginDTO)
+    {
+        var student = await _context.Students
+            .FirstOrDefaultAsync(s => s.StudentEmail == loginDTO.Email);
+
+        if (student == null || !VerifyPassword(loginDTO.Password, student.StudentPassword))
+        {
+            return Unauthorized("Invalid credentials");
+        }
+
+        return Ok("Login successful.");
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<StudentDTO>> GetStudent(int id)
     {
@@ -116,5 +130,13 @@ public class StudentController : ControllerBase
         await _context.SaveChangesAsync();
 
         return Ok("Student with id " + id + " deleted successfully.");
+    }
+
+    public bool VerifyPassword(string enteredPassword, string storedHash)
+    {
+        // Encrypt enterd password and compare with stored hash
+        string bcryptedPassword = BCrypt.Net.BCrypt.HashPassword(enteredPassword);
+
+        return enteredPassword == bcryptedPassword;
     }
 }
