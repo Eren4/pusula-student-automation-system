@@ -11,3 +11,9 @@
 	"studentAbsence": 1,
 	"studentComment": "Great work!"
 }
+
+{
+	"adminNickname": "darklord76",
+	"adminEmail": "dark@email.com",
+	"adminPassword": "dark123"
+}

@@ -7,11 +7,11 @@ namespace StudentAutomationSystem.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class GradeController : ControllerBase
+public class AdminController : ControllerBase
 {
     private readonly AppDbContext _context;
 
-    public GradeController(AppDbContext context)
+    public AdminController(AppDbContext context)
     {
         _context = context;
     }
@@ -28,6 +28,29 @@ public class GradeController : ControllerBase
         }
 
         return Ok("Login successful.");
+    }
+
+    [HttpPost("register")]
+    public async Task<ActionResult> Register([FromBody] AdminRegisterDTO adminRegisterDTO)
+    {
+        var existingAdmin = await _context.Admins
+            .FirstOrDefaultAsync(a => a.AdminEmail == adminRegisterDTO.Email);
+        if (existingAdmin != null)
+        {
+            return Conflict("Admin with email " + adminRegisterDTO.Email + " already exists");
+        }
+
+        var newAdmin = new Admin
+        {
+            AdminNickname = adminRegisterDTO.Nickname,
+            AdminEmail = adminRegisterDTO.Email,
+            AdminPassword = BCrypt.Net.BCrypt.HashPassword(adminRegisterDTO.Password) // Hash the password before storing
+        };
+
+        _context.Admins.Add(newAdmin);
+        await _context.SaveChangesAsync();
+
+        return Ok("Admin registered successfully.");
     }
 
     public bool VerifyPassword(string enteredPassword, string storedHash)
