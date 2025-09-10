@@ -19,5 +19,5 @@ public class Student
     [Column("student_password")]
     public string StudentPassword { get; set; }
 
-    public ICollection<Grade> Grades { get; set; }
+    public ICollection<Grade>? Grades { get; set; }
 }

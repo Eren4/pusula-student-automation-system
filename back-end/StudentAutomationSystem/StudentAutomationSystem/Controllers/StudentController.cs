@@ -69,7 +69,7 @@ public class StudentController : ControllerBase
             {
                 CourseId = g.CourseId,
                 CourseName = g.Course.CourseName,
-                
+
                 StudentId = g.StudentId,
                 StudentName = g.Student.StudentName,
                 StudentSurname = g.Student.StudentSurname,
@@ -85,9 +85,40 @@ public class StudentController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<StudentDTO>> CreateStudent(Student student)
     {
+        List<Student> allStudents = await _context.Students.ToListAsync();
+
+        foreach (var s in allStudents)
+        {
+            if (s.StudentEmail == student.StudentEmail)
+            {
+                return Conflict("Student with email " + student.StudentEmail + " already exists");
+            }
+        }
+
         _context.Students.Add(student);
         await _context.SaveChangesAsync();
 
+        // Hide password in the response
+        student.StudentPassword = "(secret)";
+
         return CreatedAtAction(nameof(GetStudent), new { id = student.StudentId }, student);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<Student>> DeleteStudent(int id)
+    {
+        var student = await _context.Students
+            .Include(s => s.Grades) // Include related grades
+            .FirstOrDefaultAsync(s => s.StudentId == id);
+
+        if (student == null)
+        {
+            return NotFound("Student with id " + id + " not found");
+        }
+
+        _context.Students.Remove(student);
+        await _context.SaveChangesAsync();
+
+        return student;
     }
 }

@@ -15,4 +15,19 @@ public class TeacherController : ControllerBase
     {
         _context = context;
     }
+
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<TeacherDTO>>> GetTeachers()
+    {
+        var teachers = await _context.Teachers
+            .Select(t => new TeacherDTO
+            {
+                TeacherId = t.TeacherId,
+                TeacherName = t.TeacherName,
+                TeacherSurname = t.TeacherSurname,
+                TeacherEmail = t.TeacherEmail
+            }).ToListAsync();
+
+        return teachers;
+    }
 }

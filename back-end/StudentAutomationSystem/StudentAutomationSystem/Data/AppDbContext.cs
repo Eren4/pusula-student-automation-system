@@ -30,19 +30,22 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Grade>()
             .HasOne(g => g.Student)
             .WithMany(s => s.Grades)
-            .HasForeignKey(g => g.StudentId);
+            .HasForeignKey(g => g.StudentId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         // Grade many-to-one with Course
         modelBuilder.Entity<Grade>()
             .HasOne(g => g.Course)
             .WithMany(c => c.Grades)
-            .HasForeignKey(g => g.CourseId);
+            .HasForeignKey(g => g.CourseId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         // Course one-to-many with Teacher
         modelBuilder.Entity<Course>()
             .HasOne(c => c.Teacher)
             .WithMany(t => t.Courses)
-            .HasForeignKey(c => c.TeacherId);
+            .HasForeignKey(c => c.TeacherId)
+            .OnDelete(DeleteBehavior.Restrict); // Delete the courses first, then the teacher
     }
 
 }
