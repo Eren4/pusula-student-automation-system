@@ -6,5 +6,4 @@ public class CourseDTO
     public string TeacherName { get; set; }
     public string TeacherSurname { get; set; }
     public bool CourseOngoing { get; set; }
-    public List<GradeDTO> Grades { get; set; }
 }

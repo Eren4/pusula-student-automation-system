@@ -14,10 +14,10 @@ public class Teacher
     public string TeacherSurname { get; set; }
 
     [Column("teacher_email")]
-    public string TeacherEmail { get; set; }
+    public string? TeacherEmail { get; set; }
 
     [Column("teacher_password")]
     public string TeacherPassword { get; set; }
 
-    public ICollection<Course> Courses { get; set; }
+    public ICollection<Course>? Courses { get; set; }
 }

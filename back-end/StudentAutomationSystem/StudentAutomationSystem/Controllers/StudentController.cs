@@ -86,7 +86,6 @@ public class StudentController : ControllerBase
     public async Task<ActionResult<StudentDTO>> CreateStudent(Student student)
     {
         List<Student> allStudents = await _context.Students.ToListAsync();
-
         foreach (var s in allStudents)
         {
             if (s.StudentEmail == student.StudentEmail)
@@ -98,10 +97,15 @@ public class StudentController : ControllerBase
         _context.Students.Add(student);
         await _context.SaveChangesAsync();
 
-        // Hide password in the response
-        student.StudentPassword = "(secret)";
+        var studentDto = new StudentDTO
+        {
+            StudentId = student.StudentId,
+            StudentName = student.StudentName,
+            StudentSurname = student.StudentSurname,
+            StudentEmail = student.StudentEmail
+        };
 
-        return CreatedAtAction(nameof(GetStudent), new { id = student.StudentId }, student);
+        return CreatedAtAction(nameof(GetStudent), new { id = student.StudentId }, studentDto);
     }
 
     [HttpDelete("{id}")]
