@@ -1,3 +1,5 @@
+namespace StudentAutomationSystem.DTOs;
+
 public class CourseDTO
 {
     public int CourseId { get; set; }

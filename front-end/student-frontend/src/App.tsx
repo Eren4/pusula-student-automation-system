@@ -1,53 +1,33 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register.tsx';
+import AdminDashboard from './components/AdminDashboard.tsx';
+import StudentDashboard from './components/StudentDashboard.tsx';
+import TeacherDashboard from './components/TeacherDashboard.tsx';
 import './App.css';
 
-function Login() {
-  return <h2>Login Page</h2>;
-}
-
-function Register() {
-  return <h2>Register Page</h2>;
-}
-
-function AdminDashboard() {
-  return <h2>Admin Dashboard</h2>;
-}
-
-function StudentDashboard() {
-  return <h2>Student Dashboard</h2>;
-}
-
-function TeacherDashboard() {
-  return <h2>Teacher Dashboard</h2>;
-}
-
 function App() {
-  const [userRole, setUserRole] = useState<string | null>(null);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  const userRole = localStorage.getItem('userRole');
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard"
-        element={
-          isAuthenticated ? (
-            userRole === 'admin' ? <AdminDashboard /> :
-            userRole === 'student' ? <StudentDashboard /> :
-            userRole === 'teacher' ? <TeacherDashboard /> :
+        <Route
+          path="/dashboard"
+          element={
+            userRole === 'Admin' ? <AdminDashboard /> :
+            userRole === 'Student' ? <StudentDashboard /> :
+            userRole === 'Teacher' ? <TeacherDashboard /> :
             <Navigate to="/login" />
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
-      />
-      <Route path="/" element={<Navigate to="/login" />} />
+          }
+        />
+        <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;

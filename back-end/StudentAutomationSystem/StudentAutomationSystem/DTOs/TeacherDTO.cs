@@ -1,3 +1,5 @@
+namespace StudentAutomationSystem.DTOs;
+
 public class TeacherDTO
 {
     public int TeacherId { get; set; }

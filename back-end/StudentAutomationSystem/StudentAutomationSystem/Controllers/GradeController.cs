@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentAutomationSystem.Data;
 using StudentAutomationSystem.Models;
+using StudentAutomationSystem.DTOs;
 
 namespace StudentAutomationSystem.Controllers;
 

@@ -17,3 +17,10 @@
 	"adminEmail": "dark@email.com",
 	"adminPassword": "dark123"
 }
+
+{
+	"studentName": "Eren",
+	"studentSurname": "Denizkusu",
+	"studentEmail": "eren@email.com",
+	"studentPassword": "eren123"
+}

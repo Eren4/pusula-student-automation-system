@@ -1,3 +1,5 @@
+namespace StudentAutomationSystem.DTOs;
+
 public class AdminDTO
 {
     public int AdminId { get; set; }

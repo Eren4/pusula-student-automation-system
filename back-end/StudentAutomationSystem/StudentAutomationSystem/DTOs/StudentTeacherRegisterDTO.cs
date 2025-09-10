@@ -1,3 +1,5 @@
+namespace StudentAutomationSystem.DTOs;
+
 public class StudentTeacherRegisterDTO
 {
     public string Name { get; set; }

@@ -1,3 +1,4 @@
+namespace StudentAutomationSystem.DTOs;
 
 public class StudentDTO
 {

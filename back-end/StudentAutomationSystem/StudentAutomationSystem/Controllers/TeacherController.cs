@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentAutomationSystem.Data;
 using StudentAutomationSystem.Models;
+using StudentAutomationSystem.DTOs;
 
 namespace StudentAutomationSystem.Controllers;
 
@@ -29,20 +30,6 @@ public class TeacherController : ControllerBase
             }).ToListAsync();
 
         return teachers;
-    }
-
-    [HttpGet("login")]
-    public async Task<ActionResult> Login([FromBody] LoginDTO loginDTO)
-    {
-        var teacher = await _context.Teachers
-            .FirstOrDefaultAsync(t => t.TeacherEmail == loginDTO.Email);
-
-        if (teacher == null || !VerifyPassword(loginDTO.Password, teacher.TeacherPassword))
-        {
-            return Unauthorized("Invalid credentials");
-        }
-
-        return Ok("Login successful.");
     }
 
     [HttpGet("{id}")]
@@ -131,13 +118,5 @@ public class TeacherController : ControllerBase
         await _context.SaveChangesAsync();
 
         return Ok("Teacher with id " + id + " deleted successfully.");
-    }
-
-    public bool VerifyPassword(string enteredPassword, string storedHash)
-    {
-        // Encrypt enterd password and compare with stored hash
-        string bcryptedPassword = BCrypt.Net.BCrypt.HashPassword(enteredPassword);
-
-        return enteredPassword == bcryptedPassword;
     }
 }
