@@ -1,3 +1,14 @@
+DELETE FROM course cascade;
+DELETE FROM admin cascade;
+DELETE FROM student cascade;
+DELETE FROM teacher cascade;
+DELETE FROM grade cascade;
+
+ALTER SEQUENCE student_student_id_seq RESTART WITH 1;
+ALTER SEQUENCE teacher_teacher_id_seq RESTART WITH 1;
+ALTER SEQUENCE admin_admin_id_seq RESTART WITH 1;
+ALTER SEQUENCE course_course_id_seq RESTART WITH 1;
+
 INSERT INTO student(student_name, student_surname, student_email, student_password)
 VALUES(
 'John',
@@ -24,7 +35,7 @@ VALUES(
 'Torvalds',
 'linustorvalds@email.com',
 '$2a$12$nOk180sOONCdvlCHARyVXejwOzr7C4Nu.mkk3E6D3TKJ7cbhrr3LO'
-)
+);
 
 INSERT INTO admin(admin_nickname, admin_email, admin_password)
 VALUES(

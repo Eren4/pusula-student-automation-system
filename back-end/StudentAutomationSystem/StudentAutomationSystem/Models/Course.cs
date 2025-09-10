@@ -16,7 +16,7 @@ public class Course
     [Column("course_ongoing")]
     public bool CourseOngoing { get; set; }
 
-    public Teacher Teacher { get; set; }
+    public Teacher? Teacher { get; set; }
 
-    public ICollection<Grade> Grades { get; set; }
+    public ICollection<Grade>? Grades { get; set; }
 }

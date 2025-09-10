@@ -79,7 +79,7 @@ public class TeacherController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<TeacherDTO>> CreateTeacher(Teacher teacher)
+    public async Task<IActionResult> CreateTeacher(Teacher teacher)
     {
         // Check if a teacher with the same email already exists
         List<Teacher> allTeachers = await _context.Teachers.ToListAsync();
@@ -94,15 +94,7 @@ public class TeacherController : ControllerBase
         _context.Teachers.Add(teacher);
         await _context.SaveChangesAsync();
 
-        var teacherDTO = new TeacherDTO
-        {
-            TeacherId = teacher.TeacherId,
-            TeacherName = teacher.TeacherName,
-            TeacherSurname = teacher.TeacherSurname,
-            TeacherEmail = teacher.TeacherEmail
-        };
-
-        return CreatedAtAction(nameof(GetTeacher), new { id = teacher.TeacherId }, teacherDTO);
+        return Ok("Teacher " + teacher.TeacherName + " " + teacher.TeacherSurname + " created successfully.");
     }
 
     [HttpDelete("{id}")]
@@ -124,6 +116,6 @@ public class TeacherController : ControllerBase
         _context.Teachers.Remove(teacher);
         await _context.SaveChangesAsync();
 
-        return teacher;
+        return Ok("Teacher with id " + id + " deleted successfully.");
     }
 }

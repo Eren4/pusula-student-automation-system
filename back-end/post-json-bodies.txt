@@ -1,0 +1,5 @@
+{
+	"courseName": "Clean Code Practices",
+	"teacherId": "2",
+	"courseOngoing": true
+}

@@ -83,7 +83,7 @@ public class StudentController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<StudentDTO>> CreateStudent(Student student)
+    public async Task<IActionResult> CreateStudent(Student student)
     {
         List<Student> allStudents = await _context.Students.ToListAsync();
         foreach (var s in allStudents)
@@ -97,19 +97,11 @@ public class StudentController : ControllerBase
         _context.Students.Add(student);
         await _context.SaveChangesAsync();
 
-        var studentDto = new StudentDTO
-        {
-            StudentId = student.StudentId,
-            StudentName = student.StudentName,
-            StudentSurname = student.StudentSurname,
-            StudentEmail = student.StudentEmail
-        };
-
-        return CreatedAtAction(nameof(GetStudent), new { id = student.StudentId }, studentDto);
+        return Ok("Student " + student.StudentName + " " + student.StudentSurname + " created successfully.");
     }
 
     [HttpDelete("{id}")]
-    public async Task<ActionResult<Student>> DeleteStudent(int id)
+    public async Task<IActionResult> DeleteStudent(int id)
     {
         var student = await _context.Students
             .Include(s => s.Grades) // Include related grades
@@ -123,6 +115,6 @@ public class StudentController : ControllerBase
         _context.Students.Remove(student);
         await _context.SaveChangesAsync();
 
-        return student;
+        return Ok("Student with id " + id + " deleted successfully.");
     }
 }
