@@ -3,3 +3,11 @@
 	"teacherId": "2",
 	"courseOngoing": true
 }
+
+{
+	"courseId": 1,
+	"studentId": 1,
+	"studentGrade": 80,
+	"studentAbsence": 1,
+	"studentComment": "Great work!"
+}

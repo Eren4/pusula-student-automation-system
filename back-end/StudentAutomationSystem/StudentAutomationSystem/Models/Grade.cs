@@ -20,6 +20,6 @@ public class Grade
     [Column("student_comment")]
     public string? StudentComment { get; set; }
 
-    public Course Course { get; set; }
-    public Student Student { get; set; }
+    public Course? Course { get; set; }
+    public Student? Student { get; set; }
 }
