@@ -79,6 +79,37 @@ public class TeacherController : ControllerBase
         return courses;
     }
 
+    // Get the grades of the courses of that teacher
+    [HttpGet("{id}/courses/grades")]
+    public async Task<ActionResult<IEnumerable<GradeDTO>>> GetTeacherCourseGrades(int id)
+    {
+        var teacher = await _context.Teachers.FindAsync(id);
+
+        if (teacher == null)
+        {
+            return NotFound("Teacher with id " + id + " not found");
+        }
+
+        var grades = await _context.Grades
+            .Where(g => _context.Courses.Any(c => c.CourseId == g.CourseId && c.TeacherId == id))
+            .Select(g => new GradeDTO
+            {
+                CourseId = g.CourseId,
+                CourseName = g.Course.CourseName,
+
+                StudentId = g.StudentId,
+                StudentName = g.Student.StudentName,
+                StudentSurname = g.Student.StudentSurname,
+
+                StudentGrade = g.StudentGrade,
+                StudentAbsence = g.StudentAbsence,
+                StudentComment = g.StudentComment
+            })
+            .ToListAsync();
+
+        return Ok(grades);
+    }
+
     [HttpPost]
     public async Task<IActionResult> CreateTeacher(Teacher teacher)
     {
