@@ -43,8 +43,7 @@ function StudentGradeList() {
                 <table border="1" cellPadding="8">
                     <thead>
                         <tr>
-                            <th>Course Id</th>
-                            <th>Student Id</th>
+                            <th>Course Name</th>
                             <th>Grade</th>
                             <th>Absence</th>
                             <th>Comment</th>
@@ -53,8 +52,7 @@ function StudentGradeList() {
                     <tbody>
                         {grades.map((g, index) => (
                             <tr key={index}>
-                                <td>{g.courseId}</td>
-                                <td>{g.studentId}</td>
+                                <td>{g.courseName}</td>
                                 <td>{g.studentGrade}</td>
                                 <td>{g.studentAbsence}</td>
                                 <td>{g.studentComment}</td>
