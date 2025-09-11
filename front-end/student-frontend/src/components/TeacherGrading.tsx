@@ -28,6 +28,17 @@ function TeacherGrading() {
         fetchGrades();
     }, [teacherId]);
 
+    const handleDeletion = async (studentId, courseId) => {
+        try {
+            await axios.delete(`http://localhost:5000/api/grade/student/${studentId}/course/${courseId}`);
+            setGrades(prevGrades => prevGrades.filter(grade => grade.studentId !== studentId &&
+                grade.courseId !== courseId
+            ));
+        } catch (error) {
+            console.error("Failed to delete grade:", error);
+        }
+    }
+
     if (loading) return <p>Loading grades...</p>;
     if (error) return <p style={{ color: "red" }}>{error}</p>;
 
@@ -62,7 +73,7 @@ function TeacherGrading() {
                                     <button type="button" onClick={() => {}}>Edit</button>
                                 </td>
                                 <td>
-                                    <button type="button" onClick={() => {}}>Delete</button>
+                                    <button type="button" onClick={() => handleDeletion(g.studentId, g.courseId)}>Delete</button>
                                 </td>
                             </tr>
                         ))}
