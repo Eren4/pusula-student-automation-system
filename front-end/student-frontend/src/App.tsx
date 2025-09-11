@@ -5,6 +5,7 @@ import Register from './components/Register.tsx';
 import AdminDashboard from './components/AdminDashboard.tsx';
 import StudentDashboard from './components/StudentDashboard.tsx';
 import TeacherDashboard from './components/TeacherDashboard.tsx';
+import StudentGradeList from './components/StudentGradeList.tsx';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/student-dashboard" element={<StudentDashboard />}/>
         <Route path="/teacher-dashboard" element={<TeacherDashboard />}/>
         <Route path="/admin-dashboard" element={<AdminDashboard />}/>
+        <Route path="/student-grade-list" element={<StudentGradeList />}/>
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>

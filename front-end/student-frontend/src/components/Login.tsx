@@ -12,7 +12,7 @@ function Login() {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-            
+
             sessionStorage.setItem("id", response.data.id);
             sessionStorage.setItem("email", response.data.email);
             sessionStorage.setItem("name", response.data.name);
@@ -35,6 +35,7 @@ function Login() {
 
     return (
         <div>
+            <h2>Welcome to the Student Automation App!</h2>
             <h2>Log In</h2>
             <form onSubmit={handleLogin}>
                 <div>
@@ -49,7 +50,7 @@ function Login() {
                 <button type="submit">Log In</button>
                 <div>
                     <br></br>
-                    <label>Want to sign up?</label>
+                    <label>Don't have an account?</label>
                     <button type="button" onClick={() => {sessionStorage.clear(); navigate("/register")}}>Sign Up</button>
                 </div>
             </form>
