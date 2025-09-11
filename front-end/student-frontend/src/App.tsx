@@ -6,6 +6,7 @@ import AdminDashboard from './components/AdminDashboard.tsx';
 import StudentDashboard from './components/StudentDashboard.tsx';
 import TeacherDashboard from './components/TeacherDashboard.tsx';
 import StudentGradeList from './components/StudentGradeList.tsx';
+import TeacherCourseList from './components/TeacherCourseList.tsx';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/teacher-dashboard" element={<TeacherDashboard />}/>
         <Route path="/admin-dashboard" element={<AdminDashboard />}/>
         <Route path="/student-grade-list" element={<StudentGradeList />}/>
+        <Route path="/teacher-course-list" element={<TeacherCourseList />}/>
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
