@@ -73,7 +73,7 @@ function TeacherGrading() {
                                 <td>{g.studentAbsence}</td>
                                 <td>{g.studentComment}</td>
                                 <td>
-                                    <button type="button" onClick={() => {}}>Edit</button>
+                                    <button type="button" onClick={() => {navigate("/edit-student-grade", {state: { grade: g }})}}>Edit</button>
                                 </td>
                                 <td>
                                     <button type="button" onClick={() => handleDeletion(g.studentId, g.courseId)}>Delete</button>
