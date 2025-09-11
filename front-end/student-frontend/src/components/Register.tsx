@@ -31,7 +31,7 @@ function Register() {
                  password,
                  role
             });
-            
+
             const registeredRole = response.data.role || role;
             if (registeredRole === "Student") {
                 navigate("/student-dashboard");
@@ -96,7 +96,7 @@ function Register() {
                 <div>
                     <br></br>
                     <label>Already have an account?</label>
-                    <button type="button" onClick={() => navigate("/login")}>Log In</button>
+                    <button type="button" onClick={() => {sessionStorage.clear(); navigate("/login")}}>Log In</button>
                 </div>
             </form>
         </div>

@@ -12,8 +12,13 @@ function Login() {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-            
+
             const registeredRole = response.data.role;
+            sessionStorage.setItem("id", response.data.id);
+            sessionStorage.setItem("email", response.data.email);
+            sessionStorage.setItem("name", response.data.name);
+            sessionStorage.setItem("surname", response.data.surname);
+            
             if (registeredRole === "Student") {
                 navigate("/student-dashboard");
             } else if (registeredRole === "Teacher") {
@@ -45,7 +50,7 @@ function Login() {
                 <div>
                     <br></br>
                     <label>Want to sign up?</label>
-                    <button type="button" onClick={() => navigate("/register")}>Sign Up</button>
+                    <button type="button" onClick={() => {sessionStorage.clear(); navigate("/register")}}>Sign Up</button>
                 </div>
             </form>
         </div>

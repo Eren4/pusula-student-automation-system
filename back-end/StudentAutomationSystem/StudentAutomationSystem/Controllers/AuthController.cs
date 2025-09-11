@@ -34,21 +34,45 @@ public class AuthController : ControllerBase
 
             string? hashedPassword = null;
             string? role = null;
+            UserDTO userDto = null;
 
             if (student != null)
             {
                 hashedPassword = student.StudentPassword;
                 role = "Student";
+                userDto = new UserDTO
+                {
+                    Id = student.StudentId,
+                    Name = student.StudentName,
+                    Surname = student.StudentSurname,
+                    Email = student.StudentEmail,
+                    Role = role
+                };
             }
             else if (teacher != null)
             {
                 hashedPassword = teacher.TeacherPassword; // Adjust property name
                 role = "Teacher";
+                userDto = new UserDTO
+                {
+                    Id = teacher.TeacherId,
+                    Name = teacher.TeacherName,
+                    Surname = teacher.TeacherSurname,
+                    Email = teacher.TeacherEmail,
+                    Role = role
+                };
             }
             else if (admin != null)
             {
                 hashedPassword = admin.AdminPassword; // Adjust property name
                 role = "Admin";
+                userDto = new UserDTO
+                {
+                    Id = admin.AdminId,
+                    Name = admin.AdminNickname,
+                    Email = teacher.TeacherEmail,
+                    Role = role
+                };
             }
             else
             {
@@ -61,7 +85,7 @@ public class AuthController : ControllerBase
                 return Unauthorized("Invalid email or password.");
             }
 
-            return Ok(new { role });
+            return Ok(userDto);
         }
         catch (Exception ex)
         {
