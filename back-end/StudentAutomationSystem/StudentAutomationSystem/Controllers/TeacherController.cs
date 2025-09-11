@@ -54,7 +54,7 @@ public class TeacherController : ControllerBase
     }
 
     // Get courses for a specific teacher
-    [HttpGet("{id}/courses")]
+    [HttpGet("{id}/course")]
     public async Task<ActionResult<IEnumerable<CourseDTO>>> GetTeacherCourses(int id)
     {
         var teacher = await _context.Teachers.FindAsync(id);

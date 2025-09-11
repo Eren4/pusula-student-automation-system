@@ -31,9 +31,12 @@ function TeacherGrading() {
     const handleDeletion = async (studentId, courseId) => {
         try {
             await axios.delete(`http://localhost:5000/api/grade/student/${studentId}/course/${courseId}`);
+            window.location.reload();
+            /*
             setGrades(prevGrades => prevGrades.filter(grade => grade.studentId !== studentId &&
                 grade.courseId !== courseId
             ));
+            */
         } catch (error) {
             console.error("Failed to delete grade:", error);
         }
