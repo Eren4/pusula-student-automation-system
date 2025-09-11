@@ -16,7 +16,7 @@ function TeacherCourseList() {
     useEffect(() => {
         const fetchCourses = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/teacher/${teacherId}/courses`);
+                const response = await axios.get(`http://localhost:5000/api/teacher/${teacherId}/course`);
                 setCourses(response.data);
             } catch (err) {
                 setError("Failed to fetch courses.");
@@ -39,7 +39,7 @@ function TeacherCourseList() {
                     courseOngoing: course.courseOngoing
                 });
             }
-            const response = await axios.get(`http://localhost:5000/api/teacher/${teacherId}/courses`);
+            const response = await axios.get(`http://localhost:5000/api/teacher/${teacherId}/course`);
             setCourses(response.data);
             setUpdateMessage("Course statuses updated successfully.");
         } catch (err) {
