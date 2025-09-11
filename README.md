@@ -8,3 +8,10 @@ This was my first time creating a full-stack app with these frameworks, so I spe
 # Screenshots
 ![Login Page](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/login-page.jpg)
 ![Register Page](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/register-page.jpg)
+![Student Dashboard](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/student-dashboard.jpg)
+![Student Grade List](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/student-grade-list.jpg)
+![Teacher Dashboard](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/teacher-dashboard.jpg)
+![Teacher Students](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/teacher-students.jpg)
+![Teacher Courses](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/teacher-courses.jpg)
+![Create Student](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/create-student.jpg)
+![Edit Student](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/edit-student.jpg)
