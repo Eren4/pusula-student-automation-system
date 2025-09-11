@@ -69,4 +69,64 @@ public class AuthController : ControllerBase
             return StatusCode(500, "An error occurred during login.");
         }
     }
+
+    [HttpPost("register")]
+    public async Task<ActionResult> Register([FromBody] RegisterDTO registerDto)
+    {
+        if(string.IsNullOrEmpty(registerDto.Role))
+        {
+            return BadRequest("Role is required.");
+        }
+
+        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(registerDto.Password);
+
+        switch (registerDto.Role.ToLower())
+        {
+            case "student":
+                var student = new Student
+                {
+                    StudentName = registerDto.Name,
+                    StudentSurname = registerDto.Surname,
+                    StudentEmail = registerDto.Email,
+                    StudentPassword = hashedPassword
+                };
+                _context.Students.Add(student);
+                break;
+
+            case "teacher":
+                var teacher = new Teacher
+                {
+                    TeacherName = registerDto.Name,
+                    TeacherSurname = registerDto.Surname,
+                    TeacherEmail = registerDto.Email,
+                    TeacherPassword = hashedPassword
+                };
+                _context.Teachers.Add(teacher);
+                break;
+
+            case "admin":
+                var admin = new Admin
+                {
+                    AdminNickname = registerDto.Name,
+                    AdminEmail = registerDto.Email,
+                    AdminPassword = hashedPassword
+                };
+                _context.Admins.Add(admin);
+                break;
+                
+            default:
+                return BadRequest("Invalid role. Must be Student, Teacher, or Admin.");
+        }
+        try
+        {
+            await _context.SaveChangesAsync();
+
+            return Ok("User registered successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Registration error: {ex.Message}\n{ex.StackTrace}");
+            return StatusCode(500, "An error occurred during registration.");
+        }
+    }
 }

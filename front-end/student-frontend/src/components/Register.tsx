@@ -42,19 +42,21 @@ function Register() {
             <h2>Sign Up</h2>
             <form onSubmit={handleRegister}>
                 <div>
+                    <label>Email:</label>
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                </div>
+
+                <div>
                     <label>Name:</label>
                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
                 </div>
 
-                <div>
-                    <label>Surname:</label>
-                    <input type="text" value={surname} onChange={(e) => setSurname(e.target.value)} required />
-                </div>
-
-                <div>
-                    <label>Email:</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                </div>
+                {role !== "Admin" && (
+                    <div>
+                        <label>Surname:</label>
+                        <input type="text" value={surname} onChange={(e) => setSurname(e.target.value)} required />
+                    </div>
+                )}
 
                 <div>
                     <label>Password:</label>
@@ -67,14 +69,14 @@ function Register() {
                 </div>
 
                 <div>
-                    <input type='radio' id='student' name='role' value='Student' checked={role === 'Student'} onChange={(e) => setRole(e.target.value)} />
-                    <label htmlFor='student'>Student</label>
+                    <input type='radio' id='admin' name='role' value='Admin' checked={role === 'Admin'} onChange={(e) => setRole(e.target.value)} />
+                    <label htmlFor='admin'>Admin</label>
 
                     <input type='radio' id='teacher' name='role' value='Teacher' checked={role === 'Teacher'} onChange={(e) => setRole(e.target.value)} />
                     <label htmlFor='teacher'>Teacher</label>
 
-                    <input type='radio' id='admin' name='role' value='Admin' checked={role === 'Admin'} onChange={(e) => setRole(e.target.value)} />
-                    <label htmlFor='admin'>Admin</label>
+                    <input type='radio' id='student' name='role' value='Student' checked={role === 'Student'} onChange={(e) => setRole(e.target.value)} />
+                    <label htmlFor='student'>Student</label>
                 </div>
 
                 {error && <p style={{ color: 'red' }}>{error}</p>}
