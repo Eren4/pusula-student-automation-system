@@ -70,7 +70,7 @@ public class AuthController : ControllerBase
                 {
                     Id = admin.AdminId,
                     Name = admin.AdminNickname,
-                    Email = teacher.TeacherEmail,
+                    Email = admin.AdminEmail,
                     Role = role
                 };
             }
@@ -97,55 +97,88 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     public async Task<ActionResult> Register([FromBody] RegisterDTO registerDto)
     {
-        if(string.IsNullOrEmpty(registerDto.Role))
-        {
-            return BadRequest("Role is required.");
-        }
-
-        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(registerDto.Password);
-
-        switch (registerDto.Role.ToLower())
-        {
-            case "student":
-                var student = new Student
-                {
-                    StudentName = registerDto.Name,
-                    StudentSurname = registerDto.Surname,
-                    StudentEmail = registerDto.Email,
-                    StudentPassword = hashedPassword
-                };
-                _context.Students.Add(student);
-                break;
-
-            case "teacher":
-                var teacher = new Teacher
-                {
-                    TeacherName = registerDto.Name,
-                    TeacherSurname = registerDto.Surname,
-                    TeacherEmail = registerDto.Email,
-                    TeacherPassword = hashedPassword
-                };
-                _context.Teachers.Add(teacher);
-                break;
-
-            case "admin":
-                var admin = new Admin
-                {
-                    AdminNickname = registerDto.Name,
-                    AdminEmail = registerDto.Email,
-                    AdminPassword = hashedPassword
-                };
-                _context.Admins.Add(admin);
-                break;
-                
-            default:
-                return BadRequest("Invalid role. Must be Student, Teacher, or Admin.");
-        }
         try
         {
-            await _context.SaveChangesAsync();
+            UserDTO userDto = null;
 
-            return Ok("User registered successfully.");
+            if(string.IsNullOrEmpty(registerDto.Role))
+            {
+                return BadRequest("Role is required.");
+            }
+
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(registerDto.Password);
+
+            switch (registerDto.Role.ToLower())
+            {
+                case "student":
+                    var student = new Student
+                    {
+                        StudentName = registerDto.Name,
+                        StudentSurname = registerDto.Surname,
+                        StudentEmail = registerDto.Email,
+                        StudentPassword = hashedPassword
+                    };
+
+                    _context.Students.Add(student);
+                    await _context.SaveChangesAsync();
+
+                    userDto = new UserDTO
+                    {
+                        Id = student.StudentId,
+                        Name = student.StudentName,
+                        Surname = student.StudentSurname,
+                        Email = student.StudentEmail,
+                        Role = registerDto.Role
+                    };
+                    break;
+
+                case "teacher":
+                    var teacher = new Teacher
+                    {
+                        TeacherName = registerDto.Name,
+                        TeacherSurname = registerDto.Surname,
+                        TeacherEmail = registerDto.Email,
+                        TeacherPassword = hashedPassword
+                    };
+
+                    _context.Teachers.Add(teacher);
+                    await _context.SaveChangesAsync();
+
+                    userDto = new UserDTO
+                    {
+                        Id = teacher.TeacherId,
+                        Name = teacher.TeacherName,
+                        Surname = teacher.TeacherSurname,
+                        Email = teacher.TeacherEmail,
+                        Role = registerDto.Role
+                    };
+                    break;
+
+                case "admin":
+                    var admin = new Admin
+                    {
+                        AdminNickname = registerDto.Name,
+                        AdminEmail = registerDto.Email,
+                        AdminPassword = hashedPassword
+                    };
+
+                    _context.Admins.Add(admin);
+                    await _context.SaveChangesAsync();
+
+                    userDto = new UserDTO
+                    {
+                        Id = admin.AdminId,
+                        Name = admin.AdminNickname,
+                        Email = admin.AdminEmail,
+                        Role = registerDto.Role
+                    };
+                    break;
+                
+                default:
+                    return BadRequest("Invalid role. Must be Student, Teacher, or Admin.");
+            }
+        
+             return Ok(userDto);
         }
         catch (Exception ex)
         {

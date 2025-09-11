@@ -31,6 +31,11 @@ function Register() {
                  password,
                  role
             });
+            
+            sessionStorage.setItem("id", response.data.id);
+            sessionStorage.setItem("email", response.data.email);
+            sessionStorage.setItem("name", response.data.name);
+            sessionStorage.setItem("surname", response.data.surname);
 
             const registeredRole = response.data.role || role;
             if (registeredRole === "Student") {
