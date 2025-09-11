@@ -9,6 +9,8 @@ To run the backend part, hit CTRL + F5 on Visual Studio while the window is in P
 
 To run the frontend part, navigate to student-frontend, install dependencies with "npm install", then type "npm run dev" from the command line.  
 
+No bonus missions could be completed because the application is not fully completed.  
+
 # Screenshots
 ![Login Page](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/login-page.jpg)
 ![Register Page](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/register-page.jpg)
