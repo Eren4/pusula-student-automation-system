@@ -12,8 +12,15 @@ function Login() {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-            localStorage.setItem('userRole', response.data.role);
-            navigate("/dashboard");
+            
+            const registeredRole = response.data.role;
+            if (registeredRole === "Student") {
+                navigate("/student-dashboard");
+            } else if (registeredRole === "Teacher") {
+                navigate("/teacher-dashboard");
+            } else if (registeredRole === "Admin") {
+                navigate("/admin-dashboard");
+            }
         }
         catch (err) {
             console.error(err);

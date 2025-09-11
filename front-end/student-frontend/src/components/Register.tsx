@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import AdminDashboard from './AdminDashboard.tsx';
+import StudentDashboard from './StudentDashboard.tsx';
+import TeacherDashboard from './TeacherDashboard.tsx';
 
 function Register() {
     const [name, setName] = useState('');
@@ -28,8 +31,15 @@ function Register() {
                  password,
                  role
             });
-            localStorage.setItem('userRole', response.data.role);
-            navigate("/dashboard");
+            
+            const registeredRole = response.data.role || role;
+            if (registeredRole === "Student") {
+                navigate("/student-dashboard");
+            } else if (registeredRole === "Teacher") {
+                navigate("/teacher-dashboard");
+            } else if (registeredRole === "Admin") {
+                navigate("/admin-dashboard");
+            }
         }
         catch (err) {
             console.error(err);

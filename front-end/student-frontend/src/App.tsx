@@ -8,22 +8,14 @@ import TeacherDashboard from './components/TeacherDashboard.tsx';
 import './App.css';
 
 function App() {
-  const userRole = localStorage.getItem('userRole');
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route
-          path="/dashboard"
-          element={
-            userRole === 'Admin' ? <AdminDashboard /> :
-            userRole === 'Student' ? <StudentDashboard /> :
-            userRole === 'Teacher' ? <TeacherDashboard /> :
-            <Navigate to="/login" />
-          }
-        />
+        <Route path="/student-dashboard" element={<StudentDashboard />}/>
+        <Route path="/teacher-dashboard" element={<TeacherDashboard />}/>
+        <Route path="/admin-dashboard" element={<AdminDashboard />}/>
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
