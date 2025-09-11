@@ -23,7 +23,7 @@ function Login() {
 
     return (
         <div>
-            <h2>Login</h2>
+            <h2>Log In</h2>
             <form onSubmit={handleLogin}>
                 <div>
                     <label>Email:</label>
@@ -34,7 +34,12 @@ function Login() {
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 </div>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
-                <button type="submit">Login</button>
+                <button type="submit">Log In</button>
+                <div>
+                    <br></br>
+                    <label>Want to sign up?</label>
+                    <button type="button" onClick={() => navigate("/register")}>Sign Up</button>
+                </div>
             </form>
         </div>
     );
