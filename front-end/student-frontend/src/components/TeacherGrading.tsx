@@ -82,7 +82,7 @@ function TeacherGrading() {
             )}
             <br/><br/>
 
-            <button type="button" onClick={() => {}}>Add Student</button>
+            <button type="button" onClick={() => {navigate("/add-student-grade")}}>Add Student</button>
 
             <br/><br/>
 
