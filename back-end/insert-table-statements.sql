@@ -1,15 +1,26 @@
+DELETE FROM admin cascade;
+DELETE FROM grade cascade;
+DELETE FROM student cascade;
+DELETE FROM course cascade;
+DELETE FROM teacher cascade;
+
+ALTER SEQUENCE student_student_id_seq RESTART WITH 1;
+ALTER SEQUENCE teacher_teacher_id_seq RESTART WITH 1;
+ALTER SEQUENCE admin_admin_id_seq RESTART WITH 1;
+ALTER SEQUENCE course_course_id_seq RESTART WITH 1;
+
 INSERT INTO student(student_name, student_surname, student_email, student_password)
 VALUES(
 'John',
 'Doe',
 'johndoe@email.com',
-'$2a$12$QazlqFPwyuYb4EJmeAc/i.tT3THAZaPxPSiTpJftrPIgF8ItKS7sO'
+'$2a$11$HfCsrSoE4zIz2Qxv15QmcefdrwHoCuDSyFsfV/io41ECTWQ6Vtl/W'
 ),
 (
 'Michael',
 'Jordan',
 'michaeljordan@email.com',
-'$2a$12$QjwN1014Ww6zATQXX4cPIuW02OiA2GeX58aPs4P48KqSuHtWYAS/y'
+'$2a$11$1O9KVVnpVyG3R3gpz9.oeOviSgr6qd5qbBBMA5bmKNetRaQ/X4ryW'
 );
 
 INSERT INTO teacher(teacher_name, teacher_surname, teacher_email, teacher_password)
@@ -17,20 +28,20 @@ VALUES(
 'Steve',
 'Jobs',
 'stevejobs@email.com',
-'$2a$12$hUr6AQN.dB5G15aas9Kb/uKQcphaSeDuFbafikWHcbh52w1Ps9Kvu'
+'$2a$11$DxoswufaFKmAGI04wnpTe.ZhSBfrEt7kIBU2NErZJ//uiject5EsS'
 ),
 (
 'Linus',
 'Torvalds',
 'linustorvalds@email.com',
-'$2a$12$nOk180sOONCdvlCHARyVXejwOzr7C4Nu.mkk3E6D3TKJ7cbhrr3LO'
-)
+'$2a$11$TKxHi2ZW74.lDu3gcNj6LeHjqUF92iReK6Nn1UkWGL32PhJBNtokC'
+);
 
 INSERT INTO admin(admin_nickname, admin_email, admin_password)
 VALUES(
 'georgehotz',
 'georgehotz@email.com',
-'$2a$12$m2mHKRT0szaUkBd6ye6bLe/0FeSrWdFkRQXsOmFvE4lR6e/v.9qFW'
+'$2a$11$FVs2eSh11mc.Bhl2VzoHDe535rb7ixWV0DvMBcTd8KRZn2rDmT8.S'
 );
 
 INSERT INTO course(course_name, teacher_id, course_ongoing)

@@ -1,6 +1,16 @@
 using Microsoft.EntityFrameworkCore;
+using StudentAutomationSystem.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Allow frontend to access the API
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+        policy.WithOrigins("http://localhost:5173", "https://localhost:5173")
+              .AllowAnyMethod()
+              .AllowAnyHeader());
+});
 
 // Register DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -19,6 +29,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 
