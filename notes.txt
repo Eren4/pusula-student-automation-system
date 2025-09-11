@@ -1,6 +1,0 @@
-Teacher
-- Should be able to see their courses and update whether they are ongoing or not
-- Add comment to student
-- Grade student
-
-Do operations with grade and courses
