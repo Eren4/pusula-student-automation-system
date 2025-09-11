@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,10 +86,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -106,8 +102,7 @@
               "RelativeToolTip": "Controllers\\TeacherController.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:49:31.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T11:49:31.643Z"
             },
             {
               "$type": "Document",
@@ -119,8 +114,7 @@
               "RelativeToolTip": "Controllers\\StudentController.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAAAAFMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:14:14.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T11:14:14.524Z"
             },
             {
               "$type": "Document",
@@ -132,8 +126,7 @@
               "RelativeToolTip": "Models\\Grade.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:34:13.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T11:34:13.32Z"
             },
             {
               "$type": "Document",
@@ -145,8 +138,7 @@
               "RelativeToolTip": "DTOs\\CourseDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:29:32.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T11:29:32.482Z"
             },
             {
               "$type": "Document",
@@ -158,8 +150,7 @@
               "RelativeToolTip": "DTOs\\GradeDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T11:16:58.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T11:16:58.996Z"
             },
             {
               "$type": "Document",
@@ -171,8 +162,7 @@
               "RelativeToolTip": "DTOs\\TeacherDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T10:15:45.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T10:15:45.81Z"
             },
             {
               "$type": "Document",
@@ -184,8 +174,7 @@
               "RelativeToolTip": "DTOs\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T10:15:38.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T10:15:38.857Z"
             },
             {
               "$type": "Document",
@@ -197,8 +186,7 @@
               "RelativeToolTip": "Models\\Student.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T10:12:24.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T10:12:24.877Z"
             },
             {
               "$type": "Document",
@@ -210,8 +198,7 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAUwHAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T08:56:32.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T08:56:32.043Z"
             },
             {
               "$type": "Document",
@@ -223,8 +210,7 @@
               "RelativeToolTip": "Models\\Admin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T09:30:55.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T09:30:55.287Z"
             },
             {
               "$type": "Document",
@@ -236,8 +222,7 @@
               "RelativeToolTip": "DTOs\\RegisterDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-11T08:58:56.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-11T08:58:56.189Z"
             },
             {
               "$type": "Document",
@@ -259,7 +244,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T13:42:48.742Z",
               "EditorCaption": ""
@@ -274,8 +259,7 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T13:37:47.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T13:37:47.281Z"
             }
           ]
         }
