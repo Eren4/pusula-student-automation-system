@@ -26,7 +26,8 @@ function TeacherManagement() {
     }, []);
 
     const handleDeletion = async (teacherId) => {
-        try {
+        if(window.confirm("Are you sure you want to do the delete operation?")) {
+            try {
             await axios.delete(`http://localhost:5000/api/teacher/${teacherId}`);
             // window.location.reload();
             setTeachers(prevTeachers => prevTeachers.filter(t => t.teacherId !== teacherId));
@@ -35,6 +36,7 @@ function TeacherManagement() {
                 setError("Please delete the courses of that teacher first.");
             }
             console.error("Failed to delete teacher:", error);
+        }
         }
     }
 

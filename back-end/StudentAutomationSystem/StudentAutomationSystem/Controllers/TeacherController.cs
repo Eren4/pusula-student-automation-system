@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using StudentAutomationSystem.Data;
 using StudentAutomationSystem.Models;
 using StudentAutomationSystem.DTOs;
+using BCrypt.Net;
 
 namespace StudentAutomationSystem.Controllers;
 
@@ -123,10 +124,32 @@ public class TeacherController : ControllerBase
             }
         }
 
+        teacher.TeacherPassword = BCrypt.Net.BCrypt.HashPassword(teacher.TeacherPassword);
+
         _context.Teachers.Add(teacher);
         await _context.SaveChangesAsync();
 
         return Ok("Teacher " + teacher.TeacherName + " " + teacher.TeacherSurname + " created successfully.");
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutTeacher(int id, Teacher updatedTeacher)
+    {
+        var existingTeacher = await _context.Teachers.FindAsync(id);
+        if (existingTeacher == null)
+        {
+            return NotFound("Teacher with " + id + " not found.");
+        }
+
+        existingTeacher.TeacherEmail = updatedTeacher.TeacherEmail;
+        existingTeacher.TeacherName = updatedTeacher.TeacherName;
+        existingTeacher.TeacherSurname = updatedTeacher.TeacherSurname;
+        existingTeacher.TeacherPassword = BCrypt.Net.BCrypt.HashPassword(updatedTeacher.TeacherPassword);
+
+        _context.Entry(existingTeacher).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+
+        return Ok("Teacher with id " + id + " modified successfully.");
     }
 
     [HttpDelete("{id}")]
@@ -142,7 +165,6 @@ public class TeacherController : ControllerBase
         var hasCourses = await _context.Courses.AnyAsync(c => c.TeacherId == id);
         if (hasCourses)
         {
-            Console.WriteLine("Basa");
             return Conflict("Cannot delete teacher with id " + id + " because they have courses assigned. Please reassign or delete the courses first.");
         }
 

@@ -15,12 +15,12 @@ function EditStudentGrade() {
     const [studentComment, setStudentComment] = useState("");
 
     useEffect(() => {
-    if (grade) {
-      setStudentGrade(grade.studentGrade);
-      setStudentAbsence(grade.studentAbsence);
-      setStudentComment(grade.studentComment);
-    }
-  }, [grade]);
+        if (grade) {
+        setStudentGrade(grade.studentGrade);
+        setStudentAbsence(grade.studentAbsence);
+        setStudentComment(grade.studentComment);
+        }
+    }, [grade]);
 
     const handleUpdate = async () => {
         if(studentGrade > 100 || studentGrade < 0) {
