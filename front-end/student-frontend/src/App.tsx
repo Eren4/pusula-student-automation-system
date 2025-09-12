@@ -13,6 +13,8 @@ import EditStudentGrade from './components/EditStudentGrade.tsx';
 import TeacherManagement from './components/TeacherManagement.tsx';
 import AddTeacher from './components/AddTeacher.tsx';
 import EditTeacher from './components/EditTeacher.tsx';
+import StudentManagement from './components/StudentManagement.tsx';
+import CourseManagement from './components/CourseManagement.tsx';
 import './App.css';
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
         <Route path="/teacher-management" element={<TeacherManagement />}/>
         <Route path="/add-teacher" element={<AddTeacher />}/>
         <Route path="/edit-teacher" element={<EditTeacher />}/>
+        <Route path="/student-management" element={<StudentManagement />}/>
+        <Route path="/course-management" element={<CourseManagement />}/>
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>

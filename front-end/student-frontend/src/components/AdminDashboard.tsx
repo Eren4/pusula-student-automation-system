@@ -11,11 +11,11 @@ function AdminDashboard() {
 
       <br/><br/>
 
-      <button type="button" onClick={() => {}}>Student Management</button>
+      <button type="button" onClick={() => {navigate("/student-management")}}>Student Management</button>
 
       <br/><br/>
 
-      <button type="button" onClick={() => {}}>Course Management</button>
+      <button type="button" onClick={() => {navigate("/course-management")}}>Course Management</button>
 
       <br/><br/>
 
