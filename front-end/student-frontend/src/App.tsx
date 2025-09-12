@@ -10,6 +10,9 @@ import TeacherCourseList from './components/TeacherCourseList.tsx';
 import TeacherGrading from './components/TeacherGrading.tsx';
 import AddStudentGrade from './components/AddStudentGrade.tsx';
 import EditStudentGrade from './components/EditStudentGrade.tsx';
+import TeacherManagement from './components/TeacherManagement.tsx';
+import AddTeacher from './components/AddTeacher.tsx';
+import EditTeacher from './components/EditTeacher.tsx';
 import './App.css';
 
 function App() {
@@ -26,6 +29,9 @@ function App() {
         <Route path="/teacher-grading" element={<TeacherGrading />}/>
         <Route path="/add-student-grade" element={<AddStudentGrade />}/>
         <Route path="/edit-student-grade" element={<EditStudentGrade />}/>
+        <Route path="/teacher-management" element={<TeacherManagement />}/>
+        <Route path="/add-teacher" element={<AddTeacher />}/>
+        <Route path="/edit-teacher" element={<EditTeacher />}/>
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>

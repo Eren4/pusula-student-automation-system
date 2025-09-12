@@ -142,6 +142,7 @@ public class TeacherController : ControllerBase
         var hasCourses = await _context.Courses.AnyAsync(c => c.TeacherId == id);
         if (hasCourses)
         {
+            Console.WriteLine("Basa");
             return Conflict("Cannot delete teacher with id " + id + " because they have courses assigned. Please reassign or delete the courses first.");
         }
 

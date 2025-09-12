@@ -19,7 +19,7 @@ function AdminDashboard() {
 
       <br/><br/>
 
-      <button type="button" onClick={() => {}}>Teacher Management</button>
+      <button type="button" onClick={() => {navigate("/teacher-management")}}>Teacher Management</button>
 
       <br/><br/>
 
