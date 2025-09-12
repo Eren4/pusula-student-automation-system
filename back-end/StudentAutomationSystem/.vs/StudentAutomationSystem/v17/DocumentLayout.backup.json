@@ -1,12 +1,95 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|e:\\projeler\\pusulatalentacademy\\student-automation-system\\back-end\\studentautomationsystem\\studentautomationsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|solutionrelative:studentautomationsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|e:\\projeler\\pusulatalentacademy\\student-automation-system\\back-end\\studentautomationsystem\\studentautomationsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|solutionrelative:studentautomationsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|e:\\projeler\\pusulatalentacademy\\student-automation-system\\back-end\\studentautomationsystem\\studentautomationsystem\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|solutionrelative:studentautomationsystem\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Models\\Admin.cs",
+              "RelativeDocumentMoniker": "StudentAutomationSystem\\Models\\Admin.cs",
+              "ToolTip": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Models\\Admin.cs",
+              "RelativeToolTip": "StudentAutomationSystem\\Models\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T08:50:02.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "StudentAutomationSystem\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "StudentAutomationSystem\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowEIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T08:41:55.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Program.cs",
+              "RelativeDocumentMoniker": "StudentAutomationSystem\\Program.cs",
+              "ToolTip": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Program.cs",
+              "RelativeToolTip": "StudentAutomationSystem\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T08:40:09.55Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,5 +1,31 @@
+import { useNavigate } from 'react-router-dom';
+
 function AdminDashboard() {
-  return <h2>Welcome, Admin! Manage teachers, students, courses, and grades.</h2>;
+
+  const navigate = useNavigate();
+  const adminName = sessionStorage.getItem("name");
+
+  return(
+    <div>
+      <h2>Welcome, {adminName}! Manage students, courses and teachers.</h2>
+
+      <br/><br/>
+
+      <button type="button" onClick={() => {}}>Student Management</button>
+
+      <br/><br/>
+
+      <button type="button" onClick={() => {}}>Course Management</button>
+
+      <br/><br/>
+
+      <button type="button" onClick={() => {}}>Teacher Management</button>
+
+      <br/><br/>
+
+      <button type="button" onClick={() => {sessionStorage.clear(); navigate("/login")}}>Log Out</button>
+    </div>
+  ); 
 }
 
 export default AdminDashboard;
