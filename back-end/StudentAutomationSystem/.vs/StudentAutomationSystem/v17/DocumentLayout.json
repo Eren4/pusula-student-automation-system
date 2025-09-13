@@ -74,8 +74,7 @@
               "RelativeToolTip": "StudentAutomationSystem\\Controllers\\StudentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:52:38.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T10:52:38.518Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "StudentAutomationSystem\\Controllers\\GradeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:51:33.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T10:51:33.136Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "StudentAutomationSystem\\Controllers\\CourseController.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAIwGoAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:17:53.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T09:17:53.309Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "StudentAutomationSystem\\Controllers\\TeacherController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJIAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:02:40.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T09:02:40.096Z"
             },
             {
               "$type": "Document",
@@ -126,8 +122,7 @@
               "RelativeToolTip": "StudentAutomationSystem\\Models\\Admin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T08:50:02.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T08:50:02.702Z"
             },
             {
               "$type": "Document",
@@ -139,8 +134,7 @@
               "RelativeToolTip": "StudentAutomationSystem\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAAAowGwAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T08:41:55.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T08:41:55.047Z"
             },
             {
               "$type": "Document",
@@ -150,7 +144,7 @@
               "RelativeDocumentMoniker": "StudentAutomationSystem\\Program.cs",
               "ToolTip": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Program.cs",
               "RelativeToolTip": "StudentAutomationSystem\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T08:40:09.55Z",
               "EditorCaption": ""
