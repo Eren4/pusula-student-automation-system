@@ -7,7 +7,6 @@ function AddCourse() {
 
     const [teachers, setTeachers] = useState([]);
     const [courseName, setCourseName] = useState("");
-    const [teacherId, setTeacherId] = useState();
     const [courseOngoing, setCourseOngoing] = useState(true);
 
     const[selectedTeacherId, setSelectedTeacherId] = useState();
