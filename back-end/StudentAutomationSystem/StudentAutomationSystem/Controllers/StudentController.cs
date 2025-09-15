@@ -101,6 +101,26 @@ public class StudentController : ControllerBase
         return Ok("Student " + student.StudentName + " " + student.StudentSurname + " created successfully.");
     }
 
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutStudent(int id, Student updatedStudent)
+    {
+        var existingStudent = await _context.Students.FindAsync(id);
+        if (existingStudent == null)
+        {
+            return NotFound("Student with " + id + " not found.");
+        }
+
+        existingStudent.StudentEmail = updatedStudent.StudentEmail;
+        existingStudent.StudentName = updatedStudent.StudentName;
+        existingStudent.StudentSurname = updatedStudent.StudentSurname;
+        existingStudent.StudentPassword = BCrypt.Net.BCrypt.HashPassword(updatedStudent.StudentPassword);
+
+        _context.Entry(existingStudent).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+
+        return Ok("Student with id " + id + " modified successfully.");
+    }
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteStudent(int id)
     {

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|e:\\projeler\\pusulatalentacademy\\student-automation-system\\back-end\\studentautomationsystem\\studentautomationsystem\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|solutionrelative:studentautomationsystem\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|e:\\projeler\\pusulatalentacademy\\student-automation-system\\back-end\\studentautomationsystem\\studentautomationsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|solutionrelative:studentautomationsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|e:\\projeler\\pusulatalentacademy\\student-automation-system\\back-end\\studentautomationsystem\\studentautomationsystem\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|solutionrelative:studentautomationsystem\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7727A01-8AAA-46D3-BD09-7C71D4F6B9B8}|StudentAutomationSystem\\StudentAutomationSystem.csproj|e:\\projeler\\pusulatalentacademy\\student-automation-system\\back-end\\studentautomationsystem\\studentautomationsystem\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CourseController.cs",
               "DocumentMoniker": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "StudentAutomationSystem\\Controllers\\CourseController.cs",
@@ -139,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Program.cs",
               "RelativeDocumentMoniker": "StudentAutomationSystem\\Program.cs",

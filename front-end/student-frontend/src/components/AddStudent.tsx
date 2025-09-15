@@ -52,6 +52,14 @@ function AddStudent() {
                 e.preventDefault();
                 handleAdd();
             }}>
+                <label>Student email:</label>
+                <input type="text"
+                        maxLength={50}
+                        onChange={(e) => setStudentEmail(e.target.value)}
+                        required/>
+
+                <br /><br />
+                
                 <label>Student name:</label>
                 <input type="text"
                         maxLength={50}
@@ -64,14 +72,6 @@ function AddStudent() {
                 <input type="text"
                         maxLength={50}
                         onChange={(e) => setStudentSurname(e.target.value)}
-                        required/>
-
-                <br /><br />
-
-                <label>Student email:</label>
-                <input type="text"
-                        maxLength={50}
-                        onChange={(e) => setStudentEmail(e.target.value)}
                         required/>
 
                 <br /><br />
