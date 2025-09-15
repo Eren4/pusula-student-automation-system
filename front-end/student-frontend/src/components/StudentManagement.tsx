@@ -63,7 +63,7 @@ function StudentManagement() {
                             <tr key={index}>
                                 <td>{s.studentId}</td>
                                 <td>{s.studentName}</td>
-                                <td>{s.studentName}</td>
+                                <td>{s.studentSurname}</td>
                                 <td>{s.studentEmail}</td>
                                 <td>
                                     <button type="button" onClick={() => {navigate("/edit-student", {state: { student: s }})}}>Edit</button>

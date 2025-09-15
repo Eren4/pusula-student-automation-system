@@ -17,6 +17,8 @@ import StudentManagement from './components/StudentManagement.tsx';
 import CourseManagement from './components/CourseManagement.tsx';
 import AddCourse from './components/AddCourse.tsx';
 import EditCourse from './components/EditCourse.tsx';
+import AddStudent from './components/AddStudent.tsx';
+import EditStudent from './components/EditStudent.tsx';
 import './App.css';
 
 function App() {
@@ -40,6 +42,8 @@ function App() {
         <Route path="/course-management" element={<CourseManagement />}/>
         <Route path="/add-course" element={<AddCourse />}/>
         <Route path="/edit-course" element={<EditCourse />}/>
+        <Route path="/add-student" element={<AddStudent />}/>
+        <Route path="/edit-student" element={<EditStudent />}/>
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </BrowserRouter>
