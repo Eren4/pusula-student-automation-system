@@ -59,7 +59,7 @@ function AddStudent() {
                         required/>
 
                 <br /><br />
-                
+
                 <label>Student name:</label>
                 <input type="text"
                         maxLength={50}
@@ -99,7 +99,7 @@ function AddStudent() {
 
             <br />
 
-            <button type="button" onClick={() => {navigate("/course-management")}}>Back</button>
+            <button type="button" onClick={() => {navigate("/student-management")}}>Back</button>
         </div>
     );
 }
