@@ -31,8 +31,14 @@ function AddTeacher() {
             alert("Successfully added teacher!");
             navigate("/teacher-management");
         } catch (err) {
-            setError("Error in adding teacher");
-            console.error("Failed to add teacher:", err);
+            if(err.response.status === 409) {
+                setError("Teacher with same email already exists");
+                console.error("Teacher with same email already exists:", err);
+            }
+            else {
+                setError("Error in updating teacher");
+                console.error("Failed to update teacher:", err);
+            }
         }
     }
 

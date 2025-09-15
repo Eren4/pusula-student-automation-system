@@ -95,6 +95,8 @@ public class StudentController : ControllerBase
             }
         }
 
+        student.StudentPassword = BCrypt.Net.BCrypt.HashPassword(student.StudentPassword);
+
         _context.Students.Add(student);
         await _context.SaveChangesAsync();
 
