@@ -24,3 +24,4 @@ To run the frontend part, navigate to student-frontend, install dependencies wit
 ![Admin Dashboard](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/admin-dashboard.jpg)
 ![Student Management](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/student-management.jpg)
 ![Teacher Management](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/teacher-management.jpg)
+![Course Management](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/course-management.jpg)
