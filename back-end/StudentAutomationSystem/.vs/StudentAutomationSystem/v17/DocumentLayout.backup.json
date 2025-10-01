@@ -72,10 +72,9 @@
               "RelativeDocumentMoniker": "StudentAutomationSystem\\Controllers\\StudentController.cs",
               "ToolTip": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Controllers\\StudentController.cs",
               "RelativeToolTip": "StudentAutomationSystem\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAUwHgAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAADwv2YAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T10:52:38.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T10:52:38.518Z"
             },
             {
               "$type": "Document",
@@ -99,8 +98,7 @@
               "RelativeToolTip": "StudentAutomationSystem\\Controllers\\CourseController.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAwwEgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:17:53.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T09:17:53.309Z"
             },
             {
               "$type": "Document",
@@ -110,10 +108,9 @@
               "RelativeDocumentMoniker": "StudentAutomationSystem\\Controllers\\TeacherController.cs",
               "ToolTip": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Controllers\\TeacherController.cs",
               "RelativeToolTip": "StudentAutomationSystem\\Controllers\\TeacherController.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAmwJgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwH4AAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T09:02:40.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-12T09:02:40.096Z"
             },
             {
               "$type": "Document",
@@ -147,7 +144,7 @@
               "RelativeDocumentMoniker": "StudentAutomationSystem\\Program.cs",
               "ToolTip": "E:\\Projeler\\PusulaTalentAcademy\\student-automation-system\\back-end\\StudentAutomationSystem\\StudentAutomationSystem\\Program.cs",
               "RelativeToolTip": "StudentAutomationSystem\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T08:40:09.55Z",
               "EditorCaption": ""

@@ -3,17 +3,13 @@ A full-stack student automation web application for managing students, teachers,
 
 .NET 9 was used for the backend, and React for the frontend.  
 
-This was my first time creating a full-stack app with these frameworks, so I spent time learning and discovering the tools as I built, so I was slow, that is why the admin functionalities couldn't be implemented due to deadline.  
-
 The passwords are hashed with BCrypt.  
 
 To run the backend part, hit CTRL + F5 on Visual Studio while the window is in Program.cs  
 
 The backend is running on http://localhost:5000  
 
-To run the frontend part, navigate to student-frontend, install dependencies with "npm install", then type "npm run dev" from the command line.  
-
-No bonus missions could be completed because the application is not fully completed.  
+To run the frontend part, navigate to student-frontend, install dependencies with "npm install", then type "npm run dev" from the command line.   
 
 # Screenshots
 ![Login Page](https://github.com/Eren4/pusula-student-automation-system/blob/main/screenshots/login-page.jpg)
